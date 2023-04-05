@@ -14,12 +14,12 @@ struct FooterView: View {
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .layoutPriority(2)
-            
+
             Image("logo-lineal")
                 .renderingMode(.template)
                 .foregroundColor(.gray)
                 .layoutPriority(0)
-            
+
             Text("Copyright © Mason Pham \n All right reserved")
                 .font(.footnote)
                 .fontWeight(.bold)
@@ -27,6 +27,7 @@ struct FooterView: View {
                 .multilineTextAlignment(.center)
                 .layoutPriority(1)
         } //: VSTACK
+        .padding()
     }
 }
 
