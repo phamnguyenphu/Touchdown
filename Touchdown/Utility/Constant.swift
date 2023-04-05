@@ -9,9 +9,11 @@ import SwiftUI
 
 // DATA
 
+let players: [Player] = Bundle.main.decode("player.json")
+
 // COLOR
 let colorBackground: Color = .init("ColorBackground")
-let colorGray: Color = Color(.systemGray4)
+let colorGray: Color = .init(.systemGray4)
 
 // LAYOUT
 
