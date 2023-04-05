@@ -17,8 +17,12 @@ struct ContentView: View {
             NavigationBarView()
                 .background(.white)
                 .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
-            Spacer()
-            FooterView()
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    FeaturedTabView()
+                    FooterView()
+                }
+            }
         } //: VSTACK
         .background(colorBackground)
     }
