@@ -18,7 +18,7 @@ struct ContentView: View {
                 .background(.white)
                 .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
             ScrollView(.vertical, showsIndicators: false) {
-                VStack {
+                VStack(spacing: 10) {
                     FeaturedTabView()
                     FooterView()
                 }

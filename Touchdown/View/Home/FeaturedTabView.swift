@@ -16,7 +16,6 @@ struct FeaturedTabView: View {
         } //: TABVIEW
         .tabViewStyle(.page(indexDisplayMode: .always))
         .frame(height: UIScreen.main.bounds.width / 1.6)
-        .padding(.vertical, 10)
         .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
     }
 }
