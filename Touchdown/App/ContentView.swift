@@ -21,8 +21,10 @@ struct ContentView: View {
                 VStack(spacing: 10) {
                     FeaturedTabView()
                     CategoryGridView()
-                    TitleProductView(title: "Helmets")
+                    TitleView(title: "Helmets")
                     ProductGridView()
+                    TitleView(title: "Brands")
+                    BrandGridView()
                     FooterView()
                 }
             }

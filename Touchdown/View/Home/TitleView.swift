@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TitleProductView: View {
+struct TitleView: View {
     // MARK: - PROPERTY
 
     let title: String
@@ -29,6 +29,6 @@ struct TitleProductView: View {
 
 struct TitleProductView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleProductView(title: "Helmets")
+        TitleView(title: "Helmets")
     }
 }
