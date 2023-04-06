@@ -20,11 +20,17 @@ struct ContentView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 10) {
                     FeaturedTabView()
+
                     CategoryGridView()
+
                     TitleView(title: "Helmets")
+
                     ProductGridView()
+
                     TitleView(title: "Brands")
+
                     BrandGridView()
+
                     FooterView()
                 }
             }
