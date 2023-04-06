@@ -35,7 +35,7 @@ struct ProductItemView: View {
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(.gray)
-        }
+        } //: VSTACK
     }
 }
 
