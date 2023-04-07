@@ -41,4 +41,6 @@ var gridLayout: [GridItem] {
 
 // STRING
 
+let sizes: [String] = ["XS", "S", "M", "L", "XL"]
+
 // MISC

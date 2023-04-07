@@ -28,7 +28,9 @@ struct ProductDetailView: View {
             // DETAIL BOTTOM PART
             VStack(alignment: .center, spacing: 0) {
                 // RATINGS + SIZES
-                
+                RatingAndSizesView()
+                    .padding(.top, -10)
+                    .padding(.bottom, 10)
                 // DESCRIPTION
                 ScrollView(.vertical, showsIndicators: false) {
                     Text(sampleProduct.description)
@@ -40,7 +42,12 @@ struct ProductDetailView: View {
                 
                 // QUANTITY + FAVOURITE
                 
+                QuantityFavouriteView()
+                    .padding(.vertical)
+                
                 // ADD TO CART
+                AddToCartView()
+                    .padding(.bottom, 20)
                 
                 Spacer()
             } //: VSTACK
