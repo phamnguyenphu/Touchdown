@@ -19,6 +19,7 @@ struct ProductGridView: View {
             ForEach(products) { item in
                 ProductItemView(product: item)
                     .onTapGesture {
+                        feedback.impactOccurred()
                         withAnimation(.easeIn) {
                             shop.showingProduct = true
                             shop.selectedProduct = item
