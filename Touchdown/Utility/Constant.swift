@@ -33,6 +33,8 @@ var gridLayout: [GridItem] {
 
 // UX
 
+let feedback = UIImpactFeedbackGenerator(style: .medium)
+
 // API
 
 // IMAGE
@@ -40,5 +42,7 @@ var gridLayout: [GridItem] {
 // FONT
 
 // STRING
+
+let sizes: [String] = ["XS", "S", "M", "L", "XL"]
 
 // MISC

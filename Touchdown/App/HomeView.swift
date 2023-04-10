@@ -10,32 +10,39 @@ import SwiftUI
 struct HomeView: View {
     // MARK: - PROPERTY
 
+    @EnvironmentObject var shop: Shop
+
     // MARK: - BODY
 
     var body: some View {
-        VStack {
-            NavigationBarView()
-                .background(.white)
-                .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 10) {
-                    FeaturedTabView()
+        if shop.showingProduct == false && shop.selectedProduct == nil {
+            VStack {
+                NavigationBarView()
+                    .background(.white)
+                    .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 5)
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 10) {
+                        FeaturedTabView()
 
-                    CategoryGridView()
+                        CategoryGridView()
 
-                    TitleView(title: "Helmets")
+                        TitleView(title: "Helmets")
 
-                    ProductGridView()
+                        ProductGridView()
 
-                    TitleView(title: "Brands")
+                        TitleView(title: "Brands")
 
-                    BrandGridView()
+                        BrandGridView()
 
-                    FooterView()
+                        FooterView()
+                    }
                 }
-            }
-        } //: VSTACK
-        .background(colorBackground)
+            } //: VSTACK
+            .background(colorBackground)
+        }
+        else {
+            ProductDetailView()
+        }
     }
 }
 
@@ -44,5 +51,6 @@ struct HomeView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(Shop())
     }
 }
